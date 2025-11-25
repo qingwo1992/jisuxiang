@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+//Cloudflare Pages 是一个 Edge (边缘) 环境，而不是标准的 Node.js 服务器。构建工具检测到这 3 个 API 文件没有明确说“我可以在 Edge 下运行”，所以为了安全起见，它报错阻止了构建。
+export const runtime = 'edge';
 
 // API密钥，实际应用中应该从环境变量获取
 const API_KEY = 'markitdown-api-key-hyrtjhyt464h5346vt3453y34534tsfsf';
