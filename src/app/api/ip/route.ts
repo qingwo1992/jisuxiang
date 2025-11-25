@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import iconv from 'iconv-lite';
+//Cloudflare Pages 是一个 Edge (边缘) 环境，而不是标准的 Node.js 服务器。构建工具检测到这 3 个 API 文件没有明确说“我可以在 Edge 下运行”，所以为了安全起见，它报错阻止了构建。
+export const runtime = 'edge';
 
 // 定义API源
 const API_SOURCES = [
